@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+ 
+
+#app {
+    width: 350px;
+    text-align: center;
+}
+input {
+    outline: none;
+    padding: 5px;
+    border: none;
+    border: 1px solid rgb(190, 130, 220);
+    border-radius: 4px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    padding: 8px;
+    margin-bottom: 5px;
+}
+li>span{
+    flex: 1;
+    text-align: left;
+     
+    /* border: 1px solid red; */
+}
+li.completed {
+    background-color: #d3ffd39f;
+    opacity: 0.9;
+}
+
+button {
+    background-color: rgb(190, 130, 220);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.bg-btn{
+    background-color: #5789fe;
+        color: white;
+        border: none;
+        padding: 0px 0px;
+        padding: 5px;
+        border-radius: 100%;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        cursor: pointer;
+        margin-right: 20px;
+}
+.done-bg-btn{
+    background-color: #fba122;
+}
+.del-bg-btn {
+    background-color: #ff4141;
+}
+.clear{
+    background-color: #ff4141;
+}
