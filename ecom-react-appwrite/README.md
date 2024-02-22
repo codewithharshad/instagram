@@ -25,7 +25,7 @@ This is an eCommerce project built using React.js + Vite, Appwrite BaaS, and Tai
 2. **Install dependencies:**
 
     ```bash
-    cd eCommerce-project
+    cd ecom-react-appwrite
     npm install
     ```
 
