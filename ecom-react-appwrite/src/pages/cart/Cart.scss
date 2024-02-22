@@ -1,0 +1,169 @@
+.cart{
+    font-family: 'Raleway';
+    &-btn{
+        background: linear-gradient(90deg, #E6C361 0%, #C38D48 100%) !important;       
+        &:hover{
+            background: linear-gradient(10deg, #C38D48 0%, #E6C361 100%);       
+        } 
+    }
+    &-counter{
+        background: #E6C361 !important;       
+        &:hover{
+            background: #C38D48 !important;       
+        } 
+    }
+}
+// modal
+.buy-model{
+    &-btn{
+        background: linear-gradient(90deg, #E6C361 0%, #C38D48 100%) !important;       
+        &:hover{
+            background: linear-gradient(10deg, #C38D48 0%, #E6C361 100%) !important;       
+        } 
+    }
+}
+.custom-model{
+    margin-top: 50px;
+    &-btn{
+        background: linear-gradient(90deg, #E6C361 0%, #C38D48 100%) !important;       
+        &:hover{
+            background: linear-gradient(10deg, #C38D48 0%, #E6C361 100%) !important;       
+        } 
+    }
+}
+// Order
+.order{
+    border: 1px solid #f8f8f8;
+    background-color: #fff;
+    margin-bottom: 10px;
+    width: 100%;
+    position: relative;
+    .custom-margin{
+        margin-left: 0 !important;
+    }
+    .status{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       span{
+        background: #f1f3f6;
+        padding: 8px 12px;
+        font-size: 12px;
+        margin-left: 4px;
+       }
+    }
+    .status-date{
+        position: absolute;
+        right: 10px;
+        top: 60px;
+    }
+    .cust-image-container{
+         position: absolute;
+        bottom: 10px;
+        right: 10px;
+         .toggle-btn{
+            // position: absolute;
+            // bottom: 0px;
+            // right: 10px;
+            img{
+                width: 20px;
+                cursor: pointer;
+            }
+            .tooltip {
+                position: absolute;
+                bottom: 10px;
+                right: -10px;
+                transform: translateX(-50%);
+                background-color: #333;
+                color: #fff;
+                padding: 5px;
+                border-radius: 3px;
+                display: none; /* Hide the tooltip by default */
+                width: 100px;
+                font-size: 7px;
+                text-align: center;
+              }
+              
+              .hover-image:hover + .tooltip {
+                display: block; /* Show the tooltip when the image is hovered */
+              }
+        }
+
+    }
+    
+}
+.cust-bg{
+    background: #f1f3f6 !important;
+}
+
+@media screen and (max-width: 600px) {
+    .order{
+        border: 1px solid #f8f8f8;
+        background-color: #fff;
+        margin-bottom: 10px;
+        width: 100%;
+        position: relative;
+        .custom-margin{
+            margin-left: 0 !important;
+        }
+        .status{
+            margin-top: 20px;
+            position: static;
+            right: 10px;
+            top: 10px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+           span{
+            background: #f1f3f6;
+            padding: 8px 12px;
+            font-size: 12px;
+            margin-left: 4px;
+           }
+        }
+        .status-date{
+            position: static;
+            right: 10px;
+            top: 60px;
+        }
+        .cust-image-container{
+             position: absolute;
+            bottom: 10px;
+            right: 10px;
+             .toggle-btn{
+                // position: absolute;
+                // bottom: 0px;
+                // right: 10px;
+                img{
+                    width: 20px;
+                    cursor: pointer;
+                }
+                .tooltip {
+                    position: absolute;
+                    bottom: 10px;
+                    right: -10px;
+                    transform: translateX(-50%);
+                    background-color: #333;
+                    color: #fff;
+                    padding: 5px;
+                    border-radius: 3px;
+                    display: none; /* Hide the tooltip by default */
+                    width: 100px;
+                    font-size: 7px;
+                    text-align: center;
+                  }
+                  
+                  .hover-image:hover + .tooltip {
+                    display: block; /* Show the tooltip when the image is hovered */
+                  }
+            }
+    
+        }
+        
+    }
+}

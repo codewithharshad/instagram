@@ -1,0 +1,17 @@
+.filter{
+    font-family: 'Raleway';
+     &-bg{
+        background-color:#f4f4f4;
+    }
+    &-reset{
+        // background-color:#ffff;
+        padding: 10px 12px;
+    }
+    &-select{
+        appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 30px; 
+     
+    }
+}

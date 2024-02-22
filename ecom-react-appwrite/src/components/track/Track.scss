@@ -1,0 +1,89 @@
+.track{
+    margin-top: 50px;
+    img{
+        width: 60px;
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+    &-content{
+        width: 100%;
+        margin-bottom: 30px;
+        h3{
+            font-size: 32px;
+            word-spacing: 10px;
+            font-weight: 100;
+            text-align: center;
+        }
+        h4{
+            font-size: 35px;
+            font-weight: 200;
+            letter-spacing:3px;
+            text-align: center;
+             
+        }
+        img{
+            display: block;
+            margin: auto;
+            width: 300px;
+        }
+    }
+    .bg-gray-custom{
+        background-color: #F8F8F8;
+    }
+    .track-card-main{
+        h2{
+            margin-top: 4px;
+        }
+        p{
+            font-size: 14px;
+            
+            margin-top: 4px;
+        }
+    }
+}
+.cta-section{
+    margin-top: 50px;
+    background-color: #E6C361;
+    width: 100%;
+    padding: 40px 30px;
+    color: #fff;
+    text-align: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    h2{
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+    p{
+        font-size: 12px;
+        margin-top: 2px;
+    }
+    .btn-content{
+        margin-top: 10px;
+        button{
+            text-transform: uppercase;
+            font-size: 10px;
+            margin: 5px;
+            font-weight: bold;
+            border: 1px solid #fff;
+            padding: 8px 25px;
+            font-weight: 400;
+        }
+        button:nth-child(2){
+            background-color: #fff;
+            color: #E6C361;
+        }
+        button:hover{
+            background-color: #fff;
+            color: #E6C361;
+        }
+        button:nth-child(2):hover{
+            background-color: #E6C361;
+            color: #fff;
+        }
+    }
+}

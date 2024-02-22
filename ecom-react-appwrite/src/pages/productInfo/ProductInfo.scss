@@ -1,0 +1,9 @@
+.product{
+    font-family: 'Raleway';
+    &-btn{
+        background: linear-gradient(90deg, #E6C361 0%, #C38D48 100%);       
+        &:hover{
+            background: linear-gradient(10deg, #C38D48 0%, #E6C361 100%);       
+        } 
+    }
+}

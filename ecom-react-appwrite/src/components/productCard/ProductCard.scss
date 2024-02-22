@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mr+De+Haviland&display=swap');
+
+.gold-primary{
+    background: linear-gradient(90deg, #E6C361 0%, #C38D48 100%);
+}
+.gold-primary-2{
+    background: linear-gradient(90deg, #E6C361 0%, #C38D48 100%) !important;
+    transition: all 0.3s ease-in-out 0.1s;
+    outline: none !important;
+    &:hover {
+        outline: none !important;
+        background: linear-gradient(90deg, #C38D48 0%, #E6C361 100%) !important;
+        transform: scale(0.95);
+    }
+}
+ 
+.coverobject{
+    object-fit: cover !important; /* Keep the aspect ratio and cover the container */
+}
+// font
+.mr-font{
+    font-family: "Mr De Haviland", cursive;
+}
+.rale-font{
+    font-family: "Raleway", sans-serif;
+}
+
+.featured-product{
+    background-color: #f4f4f4;
+    margin-top: 100px;
+}
+
+@media screen and (max-width: 600px) {
+    .cust-card{
+        // border: 1px solid red !important;
+        width: 100%;
+    }
+}

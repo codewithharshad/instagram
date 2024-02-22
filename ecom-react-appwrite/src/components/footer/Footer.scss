@@ -1,0 +1,37 @@
+.footer-custom{
+    h5{
+        font-weight: 500;
+        color: #111;
+        font-size: 20px;
+    }
+    img{
+        margin-top: 10px;
+        width: 100px;
+    }
+    a{
+        font-family: 'Raleway';
+    }
+    h2{
+        font-family: 'Raleway';
+    }
+}
+ 
+@media screen and (max-width: 600px){
+.cust-footer{
+    position: relative;
+    // border: 1px solid red;
+    bottom: 0;
+    margin-top: 50px;
+    .cust-footer-container{
+        padding: 40px !important;
+    }
+    img{
+        width: 100px;
+        text-align: center;
+        display: block;
+        margin: auto;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+}
+}
