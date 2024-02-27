@@ -1,4 +1,4 @@
-# eCommerce Project
+# NOTE APP
 
 This is an Note Web App project built using React.js + Vite, Appwrite BaaS, and ShadCn UI. It aims to provide a modern and responsive platform for taking notes.
 
