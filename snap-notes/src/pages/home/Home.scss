@@ -1,0 +1,32 @@
+.custom-arrow {
+  transform: rotate(-60deg);
+  margin-top: 100px;
+  right: 25%;
+  top: 170px;
+  z-index: -1;
+}
+
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 3s linear forwards;
+  animation-iteration-count: 1;
+  animation-delay: 1s;
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.dashed {
+  stroke-dasharray: 5, 12;
+}
+#arrow {
+  animation: arrow 2s linear forwards;
+  opacity: 0;
+}
+@keyframes arrow {
+  to {
+    opacity: 1;
+  }
+}
