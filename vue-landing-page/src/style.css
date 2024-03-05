@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Anton&family=Raleway:ital,wght@0,100..900;1,100..900&family=Yellowtail&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Anton&family=Archivo:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Yellowtail&display=swap');
+
+
+body{
+    background-color: #fff;
+    /* background: linear-gradient(180deg, #9df9ff, rgba(184, 216, 255, 0)); */
+    color: #111;
+    
+}
+p{
+    font-weight: 100;
+}
+.para-font{
+    font-family: "Archivo", sans-serif;
+}
+.head-font{
+    font-family: "Raleway", sans-serif;
+}

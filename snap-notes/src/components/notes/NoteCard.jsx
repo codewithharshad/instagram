@@ -49,11 +49,10 @@ function NoteCard({ isTrash }) {
     searchTitle,
     setSearchTitle,
   } = context;
-  // console.log('hello note', note)
+ 
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart);
-  // console.log("note", note);
-
+ 
   const addCart = (note) => {
     dispatch(addToCart(note));
     toast.success("add to cart");
@@ -71,8 +70,7 @@ function NoteCard({ isTrash }) {
     setDelData(item);
   };
   const handlePermanentDel = () => {
-    console.log("delData", delData.id);
-    delNote(delData.id);
+     delNote(delData.id);
   };
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cartItems));

@@ -3,7 +3,7 @@ import "./Footer.scss";
 
 const HoverSocial = () => {
   const linkToSocil = (url) => {
-    console.log("url", url);
+ 
     window.open(url, "_blank");
   };
   return (

@@ -6,7 +6,7 @@ const client = new Client();
 client
   // .setEndpoint(import.meta.env.VITE_ENDPOINT)
   .setEndpoint("https://cloud.appwrite.io/v1")
-  .setProject(" "); // add your appwrite project id here
+  .setProject("snap-notes"); // add your appwrite project id here
 
 export const account = new Account(client);
 
