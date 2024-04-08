@@ -1,0 +1,617 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&family=Roboto+Slab:wght@300;400;500;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  background-color: #1E213F;
+  height: 100%;
+  position: relative;
+  font-size: 16px;
+}
+
+.kumbh__font {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.mono__font {
+  font-family: "Space Mono", monospace;
+}
+
+.roboto__font {
+  font-family: "Roboto Slab", serif;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-top: 32px;
+  font-size: 1.5rem;
+}
+
+h3 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4.23px;
+  line-height: 100%;
+  font-size: 0.69rem;
+}
+
+.wrapper {
+  position: relative;
+}
+
+/* LAZY LOADING */
+
+img[data-src] {
+  -webkit-filter: blur(0.2em);
+          filter: blur(0.2em);
+}
+
+img {
+  -webkit-filter: blur(0em);
+          filter: blur(0em);
+  -webkit-transition: -webkit-filter 0.5s;
+  transition: -webkit-filter 0.5s;
+  transition: filter 0.5s;
+  transition: filter 0.5s, -webkit-filter 0.5s;
+}
+
+
+/* SVG CIRCLE RING */
+
+.progress-ring {
+  -webkit-box-shadow: 0px 1px 5px 17px #292d53;
+          box-shadow: 0px 1px 5px 17px #292d53;
+  background-color: #161932;
+  border-radius: 50%;
+}
+
+.progress-ring__circle {
+  stroke: #F87070;
+  -webkit-transition: 0.35s stroke-dashoffset;
+  transition: 0.35s stroke-dashoffset;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+.lime__ring {
+  stroke: #70F380;
+}
+
+.purple__ring {
+  stroke: #D881F8;
+}
+
+.pomodoro__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+
+/* START PAUSE TIMER */
+
+.ctrls {
+  position: relative;
+  bottom: 200px;
+  left: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.start__pause {
+  width: 110px;
+  background-color: inherit;
+  border: none;
+  color: #EFF1FA;
+  font-size: 0.875rem;
+  letter-spacing: 13.13px;
+  font-weight: 600;
+}
+
+.start__pause:hover {
+  -webkit-animation: heartBeat 1s;
+          animation: heartBeat 1s;
+}
+
+time {
+  font-size: 4rem;
+  color: #FFFFFF;
+  font-weight: 800;
+}
+
+/* SHORT LONG BREAK TIMER  */
+
+.break__mode--btn {
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  color: #EFF1FA;
+  height: 0;
+  opacity: 0;
+  width: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+/*when input radio is checked, label must
+change background and color among other things*/
+input[type="radio"]:checked + label.break__mode__ctrls {
+  background: #F87070;
+  color: #161932;
+  border-radius: 30px;
+  opacity: 1;
+  left: 0px;
+  place-content: center;
+  top: 3px;
+  text-align: center;
+}
+
+input[type="radio"]:focus {
+  opacity: 0.8;
+}
+
+input[type="radio"]:focus ~ label {
+  outline: 3px solid paleturquoise;
+}
+
+.lime__btn {
+  background-color: #70F380;
+}
+
+.break__mode__form {
+  background-color: #161932;
+  padding: 2px 10px;
+  border-radius: 20px;
+}
+
+.break__mode__ctrls {
+  color: #EFF1FA;
+  width: 100%;
+  padding: 1em 1.25em;
+  margin: 5px auto;
+}
+
+.pomodoro__ctrls {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.break__mode--btn:hover {
+  cursor: pointer;
+}
+
+.break__line {
+  width: 87.2%;
+  margin: auto;
+}
+
+.break__mode--btn:hover {
+  cursor: pointer;
+}
+
+.break__mode {
+  width: 100%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  position: relative;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.menu__options--btn {
+  background: no-repeat;
+  border: none;
+  margin: auto;
+  display: block;
+}
+
+/*  MODAL SETTINGS PAGE */
+.modal__settings {
+  width: 87.2%;
+  position: absolute;
+  top: 46px;
+  left: 5%;
+  background-color: #FFFFFF;
+  height: auto;
+  visibility: hidden;
+  border-radius: 15px;
+}
+
+.modal__settings__hide {
+  visibility: visible;
+}
+
+.settings__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 24px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+input.timesetter,
+input.time__control {
+  position: relative;
+}
+
+.time__settings,
+.fonts,
+.colors {
+  padding: 24px 0 10px;
+  position: relative;
+}
+
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 120px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.time__incremental {
+  position: relative;
+  width: 85%;
+  margin: 14px auto;
+}
+
+.controls {
+  position: absolute;
+  right: 15px;
+  top: -1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  /* align-items: start; */
+}
+
+label {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.875rem;
+}
+
+.time__control,
+.time__control__short,
+.time__control__long {
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #d3e2f0;
+  border: none;
+}
+
+.controls__timer {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  /* border: 1px solid red; */
+}
+
+.font__selection,
+.color__selection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+  margin: 14px auto;
+}
+
+.fonts__container,
+.color__container {
+  position: relative;
+}
+
+.fonts__list,
+.color__list {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 40px;
+  height: 40px;
+  background-color: #EFF1FA;
+  position: absolute;
+  z-index: 1;
+  border-radius: 100%;
+}
+
+.fonts,
+.colors {
+  border: none;
+}
+
+.fonts {
+  padding-bottom: 40px;
+}
+
+.fonts__label,
+.color__label {
+  z-index: 5;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* place-content: center; */
+  width: 40px;
+  height: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.color__label {
+  opacity: 0;
+}
+
+input[type="radio"]:checked + label {
+  background: #161932;
+  color: #FFFFFF;
+  border-radius: 100%;
+  opacity: 1;
+}
+
+.orange {
+  background-color: #f87070;
+}
+
+.turquoise {
+  background-color: #70f3f8;
+}
+
+.purple {
+  background-color: #d881f8;
+}
+
+.apply {
+  width: 140px;
+  margin: auto;
+  display: block;
+  padding: 18px;
+  border-radius: 26.5px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 800;
+  background-color: #F87070;
+  color: #FFFFFF;
+  position: relative;
+  top: 26px;
+}
+
+.pomodoro__ctrls {
+  position: relative;
+}
+
+.break__mode__ctrls:hover,
+button:hover,
+input[type="radio"]:hover,
+.fonts__label:hover,
+.color__label:hover {
+  cursor: pointer;
+}
+
+.sr-only {
+  position: absolute;
+  left: -5200px;
+}
+
+/* EFFECTS / ANIMATION  */
+@-webkit-keyframes heartBeat {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  14% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  28% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  42% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  70% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes heartBeat {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  14% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  28% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  42% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  70% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.menu__options--btn:hover {
+  -webkit-animation: heartBeat 1.3s ease-in-out;
+          animation: heartBeat 1.3s ease-in-out;
+}
+
+/* END OF EFFECTS / ANIMATION */
+@media screen and (min-width: 768px) {
+  h1 {
+    margin-top: 80px;
+    font-size: 2rem;
+  }
+  .break__mode {
+    gap: 25px;
+  }
+  .settings__nav {
+    padding: 24px 52px;
+  }
+  .pomodoro__container {
+    gap: 55px;
+  }
+  .progress-ring {
+    -webkit-transform: scale(1.35);
+            transform: scale(1.35);
+    margin-top: 55px;
+  }
+  .ctrls {
+    bottom: 240px;
+  }
+  time {
+    font-size: 6.25rem;
+  }
+  .start__pause {
+    font-size: 1rem;
+  }
+  .fonts,
+  .colors {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: auto;
+    width: 85%;
+  }
+  .font__selection,
+  .color__selection {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  h1 {
+    margin-top: 48px;
+  }
+  .menu__options {
+    margin-top: -55px;
+  }
+  .modal__settings {
+    width: 37.5%;
+    top: 146px;
+    left: 30%;
+  }
+  .timers {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 90%;
+    margin: auto;
+  }
+  label {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 20px;
+  }
+  .timesetter__labels {
+    -webkit-box-align: self-start;
+        -ms-flex-align: self-start;
+            align-items: self-start;
+  }
+  .controls {
+    right: 40px;
+    top: 50%;
+    }
+  span {
+    margin-left: -52px;
+    margin-bottom: 20px;
+  }
+  input[type="number"] {
+    padding: 14px;
+  }
+}

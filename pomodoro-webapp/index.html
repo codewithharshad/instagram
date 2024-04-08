@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Author: Chamu Mutezva, Topic: Pomodoro app">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+ 
+  <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+  <title>Pomodoro app</title>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body class="kumbh__font">
+  <main class="wrapper">
+    <div class="pomodoro__container">
+      <h1>Pomodoro</h1>
+      <form class="break__mode__form">
+        <fieldset class="break__mode">
+           <div class="pomodoro__ctrls">
+            <input type="radio" name="breaks" id="pomodoro" 
+             class="pomodoro--btn break__mode--btn" checked>
+            <label for="pomodoro" class="break__mode__ctrls">Pomodoro
+            </label>
+          </div>
+
+          <div class="pomodoro__ctrls">
+            <input type="radio" name="breaks" id="short" 
+             class="short--btn break__mode--btn">
+            <label for="short" class="break__mode__ctrls">Short Break
+            </label>
+          </div>
+
+          <div class="pomodoro__ctrls">
+            <input type="radio" name="breaks" id="long" 
+             class="long--btn break__mode--btn">
+            <label for="long" class="break__mode__ctrls">Long Break
+            </label>
+          </div>
+        </fieldset>
+      </form>
+      <svg class="progress-ring" width="272" height="272" aria-label="pomodoro clock">
+        <circle class="progress-ring__circle" stroke="white" stroke-width="8" fill="transparent" r="120" cx="136"
+          cy="136" />
+      </svg>
+      <!---
+    <input value="35" type="number" step="1" min="0" max="60" placeholder="progress">
+    -->
+      <div class="ctrls">
+       <!-- <i class="fas fa-business-time"></i> -->
+        <time datetime="PT0H15M0S"></time>
+        <button class="start__pause">Start</button>
+      </div>
+    </div>
+    <div class="menu__options">
+      <button class="menu__options--btn"  tabindex="0">
+        <img src="./assets/icon-settings.svg" data-src="./assets/icon-settings.svg" alt="menu settings">
+      </button>
+    </div>
+    </div>
+    <div class="modal__settings">
+      <div class="settings__nav">
+        <h2> Settings</h2>
+        <img src="./assets/icon-close.svg" data-src="./assets/icon-close.svg" alt="close the menu"
+          class="close__menu" role="button" tabindex="0"
+          id="closebtn" aria-label="close menu button">
+
+      </div>
+      <hr>
+      <form class="main__ctrl__panel">
+        <div class="time__settings">
+          <h3>time(minutes)</h3>
+          <div class="timers">
+            <!--pomodoro timer-->
+            <div class="time__incremental">
+              <label for="timesetter" class="timesetter__labels">pomodoro
+                <input type="number" name="timesetter" id="timesetter" class="time__control"
+                 value="25" min="5" max="90"
+                  step="1">
+              </label>
+
+              <div class="controls">
+                <button type="button" class="controls__timer"  tabindex="0">
+                  <img src="./assets/icon-arrow-up.svg" data-src="./assets/icon-arrow-up.svg"
+                   alt="increment up" class="controls__timer--btn btn--up" />
+                </button>
+                <button type="button" class="controls__timer" tabindex="0">
+                  <img src="./assets/icon-arrow-down.svg" data-src="./assets/icon-arrow-down.svg"
+                   alt="increment down" class="controls__timer--btn btn--down" />
+                </button>
+              </div>
+
+            </div>
+            <!--short time break-->
+            <div class="time__incremental">
+              <label for="shortsetter" class="timesetter__labels">short break
+                <input type="number" name="timesetter" id="shortsetter"
+                 class="time__control__short" value="5" min="1"
+                  max="10" step="1">
+              </label>
+
+              <div class="controls">
+                <button type="button" class="controls__timer"  tabindex="0">
+                  <img src="./assets/icon-arrow-up.svg" data-src="./assets/icon-arrow-up.svg"
+                   alt="increment up" class="controls__timer--btn btn--up" />
+                </button>
+                <button type="button" class="controls__timer" tabindex="0">
+                  <img src="./assets/icon-arrow-down.svg" data-src="./assets/icon-arrow-down.svg"
+                   alt="increment down" class="controls__timer--btn btn--down" >
+                </button>
+              </div>
+
+            </div>
+
+            <!--long time break-->
+            <div class="time__incremental">
+              <label for="longsetter" class="timesetter__labels">long break
+                <input type="number" name="timesetter" id="longsetter"
+                 class="time__control__long" value="15" min="11"
+                  max="20" step="1">
+              </label>
+
+              <div class="controls">
+                <button type="button" class="controls__timer"  tabindex="0">
+                  <img src="./assets/icon-arrow-up.svg" data-src="./assets/icon-arrow-up.svg"
+                   alt="increment up" class="controls__timer--btn btn--up" />
+                </button>
+                <button type="button" class="controls__timer"  tabindex="0">
+                  <img src="./assets/icon-arrow-down.svg" data-src="./assets/icon-arrow-down.svg"
+                   alt="increment down" class="controls__timer--btn btn--down" />
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <hr class="break__line">
+        <!--font selection -->
+        <fieldset class="fonts">
+          <h3>font</h3>
+          <legend class="sr-only">
+            select a font
+          </legend>
+          <div class="font__selection">
+
+            <div class="fonts__container">
+              <input type="radio" name="font__list" id="kumbh" class="fonts__list kumbh" checked>
+              <label for="kumbh" class="fonts__label">Aa</label>
+            </div>
+
+            <div class="fonts__container">
+              <input type="radio" name="font__list" id="roboto" class="fonts__list roboto">
+              <label for="roboto" class="fonts__label">Aa</label>
+            </div>
+
+            <div class="fonts__container">
+              <input type="radio" name="font__list" id="mono" class="fonts__list mono">
+              <label for="mono" class="fonts__label">Aa</label>
+            </div>
+
+          </div>
+        </fieldset>
+        <hr class="break__line">
+        <!--color selection-->
+        <fieldset class="colors">
+          <h3>color</h3>
+          <legend class="sr-only">
+            select a color
+          </legend>
+          <div class="color__selection">
+            <div class="color__container">
+              <input type="radio" name="color__selector" id="orange" class="orange color__list" checked>
+              <label for="orange" class="color__label">&#10003;</label>
+            </div>
+            <div class="color__container">
+              <input type="radio" name="color__selector" id="turquoise" class="turquoise color__list">
+              <label for="turquoise" class="color__label">&#10003;</label>
+            </div>
+            <div class="color__container">
+              <input type="radio" name="color__selector" id="purple" class="purple color__list">
+              <label for="purple" class="color__label">&#10003;</label>
+            </div>
+
+          </div>
+        </fieldset>
+        <button type="submit" class="apply" tabindex="0">Apply</button>
+      </form>
+  </main>
+
+  <script src="./main.js"></script>
+</body>
+
+</html>
