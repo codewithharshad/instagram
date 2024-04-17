@@ -1,0 +1,12 @@
+
+{
+  "manifest_version": 3,
+  "name": "My To-Do",
+  "version": "1.0",
+  "description": "A simple to-do list extension for Chrome",
+  "permissions": ["storage"],
+ 
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
