@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Joke Generator",
+  "version": "1.0",
+  "description": "Generates jokes for you to enjoy.",
+  "permissions": [
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "logo.png",
+      "48": "logo.png",
+      "128": "logo.png"
+    }
+  },
+  "icons": {
+    "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "jokes.json"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+}
