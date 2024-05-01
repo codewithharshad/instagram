@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+#wheel {
+  margin: auto;
+  border: 1px solid black;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  color: white;
+  animation: spin 2s ; /* Adjust duration and timing function as needed */
+  background-image: conic-gradient(red, orange, yellow, green, blue, indigo, violet, red);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); /* Start the rotation from 0 degrees */
+  }
+  100% {
+    transform: rotate(360deg); /* Rotate the full 360 degrees */
+  }
+}
+
+ 
+</style>
+</head>
+<body>
+    <div id="wheel"></div>
+</body>
+</html>
