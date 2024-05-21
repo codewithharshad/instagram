@@ -1,10 +1,41 @@
+# YouTube Clone Project
 
-### `npm start`
+This is a YouTube clone project built using React & Tailwind CSS. Also, used YT API. The application allows users to search for videos, view video details, and play videos, mimicking the core functionality of YouTube.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Search for YouTube videos
+- View video details
+- Play videos
 
- 
+## Prerequisites
+- Node.js installed
+- npm (Node package manager) installed
+
+## Getting Started
+
+### 1. Clone the Repository
+
+```bash
+ git clone ''
+ cd yt-clone
+ ```
+
+### 2. Install Dependencies
+```bash
+    npm install
+ ```
+
+ ### 3. Get a YouTube API Key
+- Go to the Google Cloud Console.
+- Create a new project.
+- Navigate to the APIs & Services > Dashboard.
+- Click on Enable APIs and Services and enable the YouTube Data API v3.
+- Create credentials for the API key.
+- Copy the API key.
+
+
+ ### 4. Run it
+```bash
+    npm start
+ ```
