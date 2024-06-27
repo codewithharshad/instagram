@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Cursor</title>
+    <style>
+      body {
+        cursor: none; /* Hide default cursor */
+      }
+
+      html,
+      body {
+        background-color: #000;
+        cursor: none !important; /* Additional override */
+      }
+
+      #custom-cursor {
+        position: fixed;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #fff; /* Customize with your desired color or image */
+        pointer-events: none !important; /* Ensure the cursor doesn't interfere with other elements */
+        z-index: 9999; /* Ensure the cursor stays on top of other elements */
+        mix-blend-mode: difference !important;
+      }
+
+      h1 {
+        margin: 100px auto;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        font-size: 36px;
+        color: #fff;
+      }
+
+      /* h1:hover {
+        mix-blend-mode: difference;   } */
+    </style>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+
+    <div id="custom-cursor"></div>
+
+    <script>
+      // Get the custom cursor element
+      const cursor = document.getElementById("custom-cursor");
+
+      // Function to update the position of the custom cursor
+      function updateCursorPosition(event) {
+        cursor.style.left = event.clientX + "px";
+        cursor.style.top = event.clientY + "px";
+      }
+
+      // Add event listener to update cursor position on mouse move
+      document.addEventListener("mousemove", updateCursorPosition);
+    </script>
+  </body>
+</html>
