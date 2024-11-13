@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: none;
+}
+
+/* Spotlight overlay */
+.spotlight-overlay {
+    --mouseX: 50vw;
+    --mouseY: 50vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.spotlight-overlay::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        circle 18em at var(--mouseX) var(--mouseY),
+        transparent,
+        rgba(0, 0, 0, 0.95)
+    );
+}
+
+/* Main container  */
+.main-container {
+    min-height: 100vh;
+    background: url('./hero.png') no-repeat center center;
+    background-size: cover;
+}
+
+/* Navigation  */
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 10rem 0;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #f0f0f0;
+}
+
+/* Hero content */
+.hero-content {
+    width: min(90%, 700px);
+    margin: 15vh auto 0;
+    text-align: center;
+    color: white;
+    padding-top: 3rem;
+}
+
+.hero-content h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 100;
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    line-height: 1.6;
+    font-weight: 300;
+    max-width: 65ch;
+    margin: 0 auto;
+}
