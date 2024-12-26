@@ -1,0 +1,114 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(9, 66, 9, 0.912);
+}
+
+.splash-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1a1a1a;
+  color: white;
+  font-size: 3em;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  
+}
+.splash-screen h1{
+    opacity: 0;
+    animation: splashAnimation 2s forwards;
+}
+@keyframes splashAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.main-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.snowCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.content {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.merryChristmas {
+  font-size: 2em;
+  color: #fff;
+}
+
+.santaImage {
+  margin-top: 10px;
+}
+
+.scratchCard {
+  margin-top: 20px;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+}
+
+.hiddenMessage {
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: #ff0000;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .splash-screen {
+    font-size: 2em;
+  }
+
+  .merryChristmas {
+    font-size: 1.5em;
+  }
+
+  .scratchCard {
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .splash-screen {
+    font-size: 1.5em;
+  }
+
+  .merryChristmas {
+    font-size: 1.2em;
+  }
+
+  .scratchCard {
+    width: 90%;
+    height: auto;
+  }
+}
