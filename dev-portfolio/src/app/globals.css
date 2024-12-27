@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #11071F; 
+    --foreground: #ffffff;   
+    --secondary-bg: #1A0B2E;
+
+
+    --card: #FFFFFF;
+    --card-foreground: #000000;
+
+    --popover: #FFFFFF;
+    --popover-foreground: #000000;
+
+    --primary: #16213E;
+    --primary-foreground: #FFFFFF;
+
+    --secondary: #E94560;
+    --secondary-foreground: #FFFFFF;
+
+    --muted: #F5F5F5;
+    --muted-foreground: #6B7280;
+
+    --accent: #391A65;
+    --accent-foreground: #FFFFFF;
+
+    --destructive: #FF0000;
+    --destructive-foreground: #FFFFFF;
+
+    --border: #E5E7EB;
+    --input: #D1D5DB;
+    --ring: #000000;
+
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Rest of your existing CSS remains the same */
+h3 code {
+  @apply !text-lg md:!text-xl;
+}
+
+pre {
+  @apply !px-0 rounded-lg overflow-x-auto py-4
+}
+ 
+pre [data-line] {
+  @apply px-4
+}
+
+code {
+  @apply text-sm md:text-base !leading-loose;
+}
+
+ 
