@@ -36,16 +36,16 @@ export const DATA = {
     email: "hello@example.com",
     tel: "+123456789",
     social: {
-      GitHub: {
+       GitHub: {
         name: "GitHub",
-        url: "https://dub.sh/dillion-github",
+        url: "https://github.com/codewithharshad",
         icon: Icons.github,
 
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://dub.sh/dillion-linkedin",
+        url: "https://www.linkedin.com/in/codewithharshad",
         icon: Icons.linkedin,
 
         navbar: true,
